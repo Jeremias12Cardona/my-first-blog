@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Estudiantes {% endblock %}
+
+{% block propio %}
+<form method='POST' style="width: 50%">
+	{% csrf_token%}
+	{{form.as_p}}
+	<input type="submit" name="Guardar">
+</form>
+{% endblock %}
